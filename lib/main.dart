@@ -24,6 +24,34 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        colorScheme: const ColorScheme.dark(
+          secondary: Color(0xff2980b9),
+          background: Color(0xff2c3e50),
+        ),
+        appBarTheme: AppBarTheme(
+          backgroundColor: const Color(0xff2c3e50),
+          shape: Border(
+            bottom: BorderSide(
+              color: Colors.white,
+              width: 1,
+            ),
+          ),
+        ),
+        textTheme: const TextTheme(
+          labelLarge: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        segmentedButtonTheme: const SegmentedButtonThemeData(
+          style: ButtonStyle(
+            foregroundColor: MaterialStatePropertyAll(Colors.white),
+          ),
+        ),
+        textButtonTheme: TextButtonThemeData(
+            style: TextButton.styleFrom(
+          foregroundColor: Colors.white,
+        )),
+        useMaterial3: true,
       ),
       routerConfig: router,
     );

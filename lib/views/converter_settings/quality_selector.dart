@@ -22,6 +22,10 @@ class QualitySelector extends HookWidget {
           value: 15000,
           label: Text("High (15000 kbps)"),
         ),
+        ButtonSegment(
+          value: 0,
+          label: Text('Manual'),
+        )
       ],
       showSelectedIcon: false,
       selected: {bitrate.value},
