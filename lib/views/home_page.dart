@@ -4,8 +4,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_video_converter/routes.dart';
 import 'package:go_router/go_router.dart';
 
-class Home extends HookWidget {
-  const Home({super.key});
+class HomePage extends HookWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
