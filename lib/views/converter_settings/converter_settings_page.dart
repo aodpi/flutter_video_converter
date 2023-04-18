@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_video_converter/views/converter_settings/quality_selector.dart';
 
-class ConverterSettings extends HookWidget {
-  const ConverterSettings({super.key, required this.filePath});
+class ConverterSettingsPage extends HookWidget {
+  const ConverterSettingsPage({super.key, required this.filePath});
 
   final String filePath;
 
@@ -48,9 +49,23 @@ class ConverterSettings extends HookWidget {
                 TextButton(
                   onPressed: () {},
                   child: const Text('Save as...'),
-                ),
+                )
               ],
-            )
+            ),
+            const SizedBox(height: 20),
+            Row(
+              children: const [
+                Text(
+                  "Quality:",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                )
+              ],
+            ),
+            Row(
+              children: const [QualitySelector()],
+            ),
           ],
         ),
       ),
